@@ -8,13 +8,17 @@ window.TrelloPowerUp.initialize({
     // Return an array of badge objects
     return t.card('all')
       .then(function(card) {
-        // Example: Show card due date status as a badge
         const badges = [];
+
+        // Always show a test badge to verify Power-Up is working
+        badges.push({
+          text: '✓ Power-Up Active',
+          color: 'green'
+        });
 
         // Badge 1: Card member count
         if (card.members && card.members.length > 0) {
           badges.push({
-            icon: 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421',
             text: card.members.length + ' member(s)',
             color: 'blue'
           });
@@ -25,8 +29,7 @@ window.TrelloPowerUp.initialize({
           const completionPercent = Math.round((card.badges.checkItemsChecked / card.badges.checkItems) * 100);
           badges.push({
             text: completionPercent + '% complete',
-            color: completionPercent === 100 ? 'green' : (completionPercent >= 50 ? 'yellow' : 'red'),
-            icon: completionPercent === 100 ? '✓' : '⋯'
+            color: completionPercent === 100 ? 'green' : (completionPercent >= 50 ? 'yellow' : 'red')
           });
         }
 
