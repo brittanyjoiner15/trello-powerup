@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Trello Power-Up</title>
+  <link rel="icon" href="https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #0079bf;
+    }
+    .status {
+      padding: 10px;
+      background: #f4f5f7;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+    code {
+      background: #e4e4e4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Monaco', 'Menlo', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Trello Power-Up</h1>
+
+  <div class="status">
+    <h2>Status: Ready</h2>
+    <p>Your Trello Power-Up is running successfully!</p>
+  </div>
+
+  <h2>Features</h2>
+  <ul>
+    <li><strong>Card Badges:</strong> Displays member count and checklist completion on card fronts</li>
+    <li><strong>Card Buttons:</strong> Adds custom action buttons in card detail view</li>
+    <li><strong>Board Buttons:</strong> Adds settings button in board header</li>
+  </ul>
+
+  <h2>Setup Instructions</h2>
+  <ol>
+    <li>Deploy this Power-Up to Netlify or your hosting platform</li>
+    <li>Go to <a href="https://trello.com/power-ups/admin" target="_blank">Trello Power-Ups Admin</a></li>
+    <li>Click "Create New Power-Up"</li>
+    <li>Enter your Power-Up details</li>
+    <li>Set the Iframe Connector URL to: <code>https://your-site.netlify.app/connector.js</code></li>
+    <li>Enable the Power-Up on your board</li>
+  </ol>
+
+  <h2>Customize</h2>
+  <p>Edit <code>connector.js</code> to customize the badges, buttons, and functionality.</p>
+
+  <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  <script src="./connector.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Allow Trello to iframe your Power-Up
+    X-Frame-Options = "ALLOW-FROM https://trello.com"
+    Content-Security-Policy = "frame-ancestors https://trello.com"
+    Access-Control-Allow-Origin = "*"
