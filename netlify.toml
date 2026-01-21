@@ -6,3 +6,5 @@
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET, POST, OPTIONS"
     Access-Control-Allow-Headers = "Content-Type"
+    # Prevent aggressive caching during development
+    Cache-Control = "public, max-age=60, must-revalidate"
