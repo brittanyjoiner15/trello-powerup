@@ -1,27 +1,16 @@
-// Trello Power-Up Connector
-// This file defines the capabilities and behavior of your Power-Up
-
-console.log('Power-Up connector.js is loading...');
-
-// Initialize the Power-Up
+// Trello Power-Up Connector - Ultra Simple Version
 window.TrelloPowerUp.initialize({
-  // Card badges appear on the front of cards
   'card-badges': function(t, options) {
-    console.log('card-badges capability called');
-    // Return a simple badge without any async operations
     return [{
-      text: '✓ Active',
-      color: 'green'
+      text: 'hi world'
     }];
   },
 
-  // Card buttons appear in the card detail view
   'card-buttons': function(t, options) {
-    console.log('card-buttons capability called');
     return [{
-      text: 'Test Button',
+      text: 'Open Trello Substack',
       callback: function(t) {
-        alert('Power-Up is working!');
+        window.open('https://trello.substack.com/', '_blank');
       }
     }];
   }
